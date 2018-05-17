@@ -1,0 +1,66 @@
+{
+    "_version": "1.4.0",
+    "sap.app": {
+    "id": "app",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "title": "{{APP_TITLE}}",
+        "description": "{{APP_DESCRIPTION}}",
+        "applicationVersion": {
+        "version": "1.0.0"
+    },
+    "dataSources": {
+        "zms": {
+            "uri": "http://sapslc.mow.molga.ru:8000/sap/opu/odata/SAP/ZMS_SRV/",
+                "type": "OData",
+                "settings": {
+                "odataVersion": "2.0"
+            }
+        }
+    },
+    "crossNavigation": {
+        "inbounds": {}
+    }
+},
+    "sap.ui": {
+    "technology": "UI5",
+        "deviceTypes": {
+        "desktop": true,
+            "tablet": true,
+            "phone": true
+    },
+    "supportedThemes": [
+        "sap_belize"
+    ]
+},
+    "sap.ui5": {
+    "_version": "1.3.0",
+        "rootView": "myapp.view.Main",
+        "dependencies": {
+        "minUI5Version": "1.40.0",
+            "libs": {
+            "sap.m": {},
+            "sap.ui.layout":{}
+
+        }
+    },
+    "contentDensities": {
+        "cozy": true,
+            "compact": false
+    },
+    "models": {
+        "i18n": {
+            "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                "bundleName": "myapp.i18n.i18n"
+            }
+        },
+        "zms_srv": {
+            "dataSource": "zms",
+                "settings": {
+                "defaultUpdateMethod": "PUT"
+            }
+        }
+    }
+}
+}
