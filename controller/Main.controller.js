@@ -53,7 +53,6 @@ sap.ui.define([
 
             oModel.setData(oData);
             this._toggleButtonsAndView(false);
-
         },
 
 
@@ -61,18 +60,20 @@ sap.ui.define([
             this._toggleButtonsAndView(false);
 
             var oModel = this.getView().getModel();
-            var aData = oModel.getProperty("/Profile");
+            var aData = oModel.getProperty("/Profile/0");
 
-            console.log(oModel);
+            console.log(aData);
 
-            this.zms_srv.update("/ProfileSet('00000001')/cellPhone", "blablabla", {
-                success: function (oData) {
-                    console.log("Answer updated", oData);
+            this.zms_srv.update("/ProfileSet(pernr='00000001')", aData, {
+                success: function (aData) {
+                    console.log("Answer updated", aData);
                 }.bind(this),
                 error: function () {
                     console.log("Error");
                 }.bind(this)
             });
+
+            // /ProfileSet?$select=cellPhone"
 
             // this.zms_srv.update("/ProfileSet('00000001')/cellPhone", 'aData', function () {
             //     sap.m.MessageToast.show(" updated Successfully");

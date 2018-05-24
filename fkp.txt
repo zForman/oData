@@ -1,0 +1,20 @@
+"/ProfileSet(pernr=" + sIndex + ")"
+
+
+
+var sKey = this.mSrv.createKey( "/UpdateSet", {
+  nuid: sNuID,
+  noteId: sNoteId
+});
+this.mSrv.update( sKey, {
+  nuid: sNuID,
+  noteId: sNoteId,
+  noteTxt: sNoteTxt
+}, {
+  success: function(oData) {
+    console.log("Answer updated", oData);
+  }.bind(this),
+  error: function() {
+    console.log("Error");
+  }.bind(this)
+});
