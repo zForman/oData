@@ -24,10 +24,10 @@
                       columnsM="1"
                       singleContainerFullSize="false">
             <f:content>
-
                 <Label text="Новый номер телефона"/>
-                <Input id="cellPhone" value="{cellPhone}"/>
+                <Input id="cellPhone" type="text" value="{cellPhone}" valueLiveUpdate="true"/>
             </f:content>
         </f:SimpleForm>
+
     </VBox>
 </core:FragmentDefinition>

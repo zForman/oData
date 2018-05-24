@@ -24,7 +24,6 @@ sap.ui.define([
             this._showFormFragment('Display');
             this.byId('edit').setEnabled(true);
 
-
         },
 
         onExit: function () {
@@ -57,16 +56,34 @@ sap.ui.define([
 
         },
 
-        handleSavePress: function () {
 
+        handleSavePress: function (oEvent) {
             this._toggleButtonsAndView(false);
 
             var oModel = this.getView().getModel();
-            var cellPhone = this.getView().byId("cellPhone").getValue();
+            var aData = oModel.getProperty("/Profile");
 
-            oModel.setData({
-                cellPhone: cellPhone,
+            console.log(oModel);
+
+            this.zms_srv.update("/ProfileSet('00000001')/cellPhone", "blablabla", {
+                success: function (oData) {
+                    console.log("Answer updated", oData);
+                }.bind(this),
+                error: function () {
+                    console.log("Error");
+                }.bind(this)
             });
+
+            // this.zms_srv.update("/ProfileSet('00000001')/cellPhone", 'aData', function () {
+            //     sap.m.MessageToast.show(" updated Successfully");
+            // }, function () {
+            //     sap.m.MessageToast.show("failure");
+            // });
+
+
+            // oModel.setProperty("/Profile/0/cellPhone", 'abc')
+
+
         },
 
         _formFragments: {},

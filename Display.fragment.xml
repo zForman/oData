@@ -6,12 +6,7 @@
         xmlns:l="sap.ui.layout"
         xmlns:core="sap.ui.core">
     <VBox class="sapUiSmallMargin"
-          items="{
-                path: '/Profile',
-                sorter: {
-                    path : 'ename'
-                    }
-                }">
+          items="{/Profile}">
         <f:SimpleForm
                 title="Профиль"
                 editable="false"

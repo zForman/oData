@@ -8,6 +8,7 @@
     <Page
             id="mainView"
             showHeader="false">
+
         <footer>
             <Bar>
                 <contentRight>
