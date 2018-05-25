@@ -60,31 +60,27 @@ sap.ui.define([
             this._toggleButtonsAndView(false);
 
             var oModel = this.getView().getModel();
-            var aData = oModel.getProperty("/Profile/0");
 
-            console.log(aData);
-
-            this.zms_srv.update("/ProfileSet(pernr='00000001')", aData, {
-                success: function (aData) {
-                    console.log("Answer updated", aData);
-                }.bind(this),
-                error: function () {
-                    console.log("Error");
-                }.bind(this)
-            });
-
-            // /ProfileSet?$select=cellPhone"
-
-            // this.zms_srv.update("/ProfileSet('00000001')/cellPhone", 'aData', function () {
-            //     sap.m.MessageToast.show(" updated Successfully");
-            // }, function () {
-            //     sap.m.MessageToast.show("failure");
-            // });
+            var aData = oModel.getProperty("/Profile");
 
 
-            // oModel.setProperty("/Profile/0/cellPhone", 'abc')
-
-
+            for (var i = 0; i < aData.length; i++) {
+                var item = aData[i];
+                var key = this.zms_srv.createKey("/ProfileSet", {
+                    pernr: item['pernr']
+                });
+                if (item) {
+                    this.zms_srv.update(key, aData[i], {
+                        success: function (oData) {
+                            console.log("Answer updated", oData);
+                        }.bind(this),
+                        error: function () {
+                            console.log("Error");
+                        }.bind(this)
+                    });
+                }
+                // console.log("key", key, "item", item, 'i', i);
+            }
         },
 
         _formFragments: {},
@@ -120,8 +116,6 @@ sap.ui.define([
             oPage.removeAllContent();
             oPage.insertContent(this._getFormFragment(sFragmentName));
         },
-
-
     });
 
 });

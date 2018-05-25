@@ -1,0 +1,65 @@
+"/ProfileSet(pernr=" + sIndex + ")"
+
+
+
+var sKey = this.mSrv.createKey( "/UpdateSet", {
+  nuid: sNuID,
+  noteId: sNoteId
+});
+
+this.mSrv.update( sKey, {
+  nuid: sNuID,
+  noteId: sNoteId,
+  noteTxt: sNoteTxt
+}, {
+  success: function(oData) {
+    console.log("Answer updated", oData);
+  }.bind(this),
+  error: function() {
+    console.log("Error");
+  }.bind(this)
+});
+
+ var sKey = this.zms_srv.createEntry("/ProfileSet", {
+                pernr: aData['pernr']
+            });
+
+
+
+var model = that.getOwnerComponent() ? that.getOwnerComponent().getModel("yearModel") : that.getModel("yearModel");
+var modelData = model.getProperty("/items");
+
+//проверяем, является ли modelData массивом, если да то выполняется цикл
+if (modelData instanceof Array) {
+        modelData.forEach( function(oValue, i) {
+          // обращаемся к элементам как oValue.key, oValue.load
+  });
+}
+
+
+
+  aData.forEach(function (oValue) {
+                var oData = 'pernr='+oValue['pernr'];
+                console.log(oData);
+                }
+
+
+
+ this.zms_srv.update("/ProfileSet('00000001')", aData, {
+                success: function (aData) {
+                    console.log("Answer updated", aData);
+                }.bind(this),
+                error: function () {
+                    console.log("Error");
+                }.bind(this)
+            });
+
+
+
+             var oPernr = '';
+                        aData.forEach(function (oValue) {
+                            var oData = oValue['pernr'] + '/';
+                            return oPernr += oData;
+                        });
+                        oPernr = oPernr.split("/");
+                        console.log(oPernr);
