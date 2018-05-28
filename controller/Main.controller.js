@@ -59,9 +59,7 @@ sap.ui.define([
         handleSavePress: function (oEvent) {
             var that = this;
             this._toggleButtonsAndView(false);
-
             var oModel = this.getView().getModel();
-
             var aData = oModel.getProperty("/Profile");
 
             aData.forEach(function (item) {
@@ -79,25 +77,6 @@ sap.ui.define([
                     })
                 }
             );
-
-            // for (var i = 0; i < aData.length; i++) {
-            //
-            //     var item = aData[i];
-            //     var key = this.zms_srv.createKey("/ProfileSet", {
-            //         pernr: item['pernr']
-            //     });
-            //     if (item) {
-            //         this.zms_srv.update(key, item, {
-            //             success: function (oData) {
-            //                 console.log("Answer updated", oData);
-            //             }.bind(this),
-            //             error: function () {
-            //                 console.log("Error");
-            //             }.bind(this)
-            //         });
-            //     }
-            //     // console.log("key", key, "item", item, 'i', i);
-            // }
         },
 
         _formFragments: {},

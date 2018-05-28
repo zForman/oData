@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e2bf3be-c206-4241-bf3b-146c3666b0b8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oData" beforeDir="false" afterPath="$PROJECT_DIR$/oData" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/Main.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/Main.controller.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,7 +17,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/oData/index.html">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
@@ -27,10 +26,10 @@
         </entry>
       </file>
       <file leaf-file-name="Main.controller.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/oData/controller/Main.controller.js">
+        <entry file="file://$PROJECT_DIR$/controller/Main.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="71" column="52" lean-forward="true" selection-start-line="71" selection-start-column="52" selection-end-line="71" selection-end-column="52" />
+            <state relative-caret-position="127">
+              <caret line="78" column="14" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -60,8 +59,8 @@
         <option value="$PROJECT_DIR$/Change.fragment.xml" />
         <option value="$PROJECT_DIR$/manifest.json" />
         <option value="$PROJECT_DIR$/fkp.txt" />
-        <option value="$PROJECT_DIR$/controller/Main.controller.js" />
         <option value="$PROJECT_DIR$/oData/controller/Main.controller.js" />
+        <option value="$PROJECT_DIR$/controller/Main.controller.js" />
       </list>
     </option>
   </component>
@@ -87,7 +86,7 @@
     <option name="height" value="800" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -98,22 +97,21 @@
               <item name="oData4" type="b2602c69:ProjectViewProjectNode" />
               <item name="oData4" type="462c0819:PsiDirectoryNode" />
             </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
             <path>
-              <item name="oData4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oData4" type="462c0819:PsiDirectoryNode" />
-              <item name="oData" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="oData4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oData4" type="462c0819:PsiDirectoryNode" />
-              <item name="oData" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="oData4" type="cbb8eebc:String" user="oData4" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -126,6 +124,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -165,7 +168,7 @@
       <workItem from="1527245652499" duration="8524000" />
       <workItem from="1527490907883" duration="589000" />
       <workItem from="1527511453692" duration="849000" />
-      <workItem from="1527514554941" duration="3840000" />
+      <workItem from="1527514554941" duration="4125000" />
     </task>
     <task id="LOCAL-00001" summary="udp">
       <created>1527519619055</created>
@@ -178,10 +181,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88040000" />
+    <option name="totallyTimeSpent" value="88325000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8312757" visible="true" weight="0.32962668" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -266,20 +270,20 @@
     <entry file="file://$PROJECT_DIR$/index.html" />
     <entry file="file://$PROJECT_DIR$/controller/Main.controller.js" />
     <entry file="file://$PROJECT_DIR$/Component.js" />
-    <entry file="file://$PROJECT_DIR$/oData/index.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/oData/README.md">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/oData/controller/Main.controller.js">
+    <entry file="file://$PROJECT_DIR$/controller/Main.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="71" column="52" lean-forward="true" selection-start-line="71" selection-start-column="52" selection-end-line="71" selection-end-column="52" />
+        <state relative-caret-position="127">
+          <caret line="78" column="14" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="14" />
         </state>
       </provider>
     </entry>
