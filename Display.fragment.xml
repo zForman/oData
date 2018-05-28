@@ -1,0 +1,55 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:tnt="sap.tnt"
+        xmlns:a="sap.f"
+        xmlns:f="sap.ui.layout.form"
+        xmlns:l="sap.ui.layout"
+        xmlns:core="sap.ui.core">
+    <VBox class="sapUiSmallMargin"
+          items="{/Profile}">
+        <f:SimpleForm
+                title="Профиль"
+                editable="false"
+                layout="ResponsiveGridLayout"
+                labelSpanXL="3"
+                labelSpanL="3"
+                labelSpanM="3"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="4"
+                emptySpanL="4"
+                emptySpanM="4"
+                emptySpanS="0"
+                columnsXL="1"
+                columnsL="1"
+                columnsM="1"
+                maxContainerCols="2"
+                singleContainerFullSize="false">
+            <f:content>
+                <l:HorizontalLayout>
+
+                    <VBox
+                            alignItems="Right">
+                        <a:Avatar
+                                src="http://sapslc.mow.molga.ru:8000/{photo}"
+                                displaySize="L">
+                        </a:Avatar>
+                    </VBox>
+
+                </l:HorizontalLayout>
+                <Label text="Ф.И.О"/>
+                <Text id="nameText" text="{ename}"/>
+
+                <Label text="Телефон"/>
+                <Text text="{cellPhone}"/>
+
+                <Label text="Табельный номер"/>
+                <Text text="{pernr}"/>
+
+                <!--<Button id="editCellPhone" text="Изменить телефон" enabled="false" press="handleEditPress"/>-->
+                <!--<Button id="saveCellPhone" text="Сохранить" type="Emphasized" visible="false" press="handleSavePress"/>-->
+                <!--<Button id="cancelCellPhone" text="Отменить" visible="false" press="handleCancelPress"/>-->
+            </f:content>
+        </f:SimpleForm>
+    </VBox>
+</core:FragmentDefinition>

@@ -1,0 +1,22 @@
+<mvc:View
+        height="100%"
+        controllerName="myapp.controller.Main"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns="sap.m">
+
+
+    <Page
+            id="mainView"
+            showHeader="false">
+
+        <footer>
+            <Bar>
+                <contentRight>
+                    <Button id="edit" text="Изменить данные всех пользователей" enabled="false" press="handleEditPress"/>
+                    <Button id="save" text="Сохранить" type="Emphasized" visible="false" press="handleSavePress"/>
+                    <Button id="cancel" text="Отменить" visible="false" press="handleCancelPress"/>
+                </contentRight>
+            </Bar>
+        </footer>
+    </Page>
+</mvc:View>
