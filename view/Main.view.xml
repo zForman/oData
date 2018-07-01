@@ -1,22 +1,68 @@
 <mvc:View
-        height="100%"
         controllerName="myapp.controller.Main"
         xmlns:mvc="sap.ui.core.mvc"
+        xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+        xmlns:l="sap.ui.layout"
         xmlns="sap.m">
 
+    <SplitContainer id="SplitCont" initialDetail="detail1" initialMaster="master">
+        <detailPages>
 
-    <Page
-            id="mainView"
-            showHeader="false">
+            <Page id="detail1" title="Список сотрудников" class="sapUiStdPage">
+                <List
+                        id="ProductList"
+                        items="{/Profile}"
+                        mode="SingleSelectMaster"
+                        includeItemInSelection="true"
+                        growing="true"
+                        growingThreshold="5"
+                        growingScrollToLoad="false"
+                        selectionChange="onItemSelected">
+                    <StandardListItem
+                            title="{ename}"
+                            icon="http://sapslc.mow.molga.ru:8000/{photo}"
+                            iconDensityAware="false"
+                            iconInset="false"/>
+                </List>
 
-        <footer>
-            <Bar>
-                <contentRight>
-                    <Button id="edit" text="Изменить данные всех пользователей" enabled="false" press="handleEditPress"/>
-                    <Button id="save" text="Сохранить" type="Emphasized" visible="false" press="handleSavePress"/>
-                    <Button id="cancel" text="Отменить" visible="false" press="handleCancelPress"/>
-                </contentRight>
-            </Bar>
-        </footer>
-    </Page>
+                <Panel id="employeeListDetail"
+                       headerText="Подробная информация"
+                       visible="false">
+                    <l:Grid>
+                        <!--<Text text="Ф.И.О:\n {ename}"/>-->
+                        <Text text="Номер Телефона:\n  {cellPhone}"/>
+                        <Text text="Табельный номер:\n  {pernr}"/>
+                        <Button id="editCellPhone" text="Изменить телефон" type="Transparent" visible="true"
+                                press="handleEditPress"/>
+                    </l:Grid>
+                </Panel>
+
+            </Page>
+
+            <Page id="detail2" title="Список сотрудников" class="sapUiStdPage">
+                <content>
+                    <Label text="Ф.И.О."/>
+                </content>
+            </Page>
+
+            <Page id="detail3" title="Список сотрудников" class="sapUiStdPage">
+                <content>
+                    <Label text="Ф.И.О."/>
+                </content>
+            </Page>
+        </detailPages>
+
+        <masterPages>
+            <Page id="master" title="Орг.единица" class="sapUiStdPage">
+                <content>
+                    <List itemPress="onListItemPress"
+                          items="{/Org}">
+                        <items>
+                            <StandardListItem title="{text}" type="Active" custom:to="detail1"/>
+                        </items>
+                    </List>
+                </content>
+            </Page>
+        </masterPages>
+    </SplitContainer>
 </mvc:View>

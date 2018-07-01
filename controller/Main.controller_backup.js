@@ -34,23 +34,47 @@ sap.ui.define([
                     new sap.ui.model.Filter("type", "EQ", "O"),
                 ],
                 success: function (oData, oNavOrg) {
+                    // console.log("OrgSet", oData);
+                    // console.log("oNavOrg", oNavOrg);
                     var arr = [];
                     var aSearch = oNavOrg.data.results;
+
+                    // aSearch.map(function (val) {
+                    //     if (val['type'] === 'O') {
+                    //         arr.push(val['NavOrgOrg']);
+                    //     }
+                    // });
 
                     function iterObj(aSearch) {
 
                         for (var key in aSearch) {
+                            // console.log(key + ': ' + aSearch[key]);
                             if (aSearch[key] !== null && typeof aSearch[key] === "object") {
+                                // Recurse into children
                                 iterObj(aSearch[key]);
                                 if (aSearch[key]['type'] === "O") {
+                                    // console.log(key);
                                     arr.push(aSearch[key]);
                                 }
+                                // console.log(key);
                             }
+
                         }
                     }
 
                     iterObj(aSearch);
-                    // console.log(arr);
+                    // for (var key in aSearch) {
+                    //     if (aSearch['type'] === 'S') ;
+                    //     arr.push(aSearch[key])
+                    // }
+                    // aSearch.forEach(function (val) {
+                    //     if (val['NavOrgOrg']) {
+                    //         // console.log(val['NavOrgOrg']);
+                    //         arr.push(val['NavOrgOrg'].results);
+                    //     }
+                    // });
+                    console.log(arr);
+                    // console.log("aSearch: " + aSearch);
 
                     this.getView().getModel().setProperty('/Org', arr);
                 }.bind(this),
@@ -58,6 +82,9 @@ sap.ui.define([
                     console.log('Error', oError);
                 }
             });
+
+            // var aOrgUnit = this.getView().getModel().getProperty("/Profile/results");
+            // console.log(aOrgUnit);
         },
 
         onAfterRendering: function () {

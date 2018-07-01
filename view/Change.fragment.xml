@@ -1,0 +1,37 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:f="sap.ui.layout.form"
+        xmlns:core="sap.ui.core">
+    <Dialog
+            id="myDialog"
+            showHeader="false"
+    >
+        <f:SimpleForm id="SimpleFormChange354"
+                      editable="true"
+                      layout="ResponsiveGridLayout"
+                      title="Новый номер"
+                      labelSpanXL="1"
+                      labelSpanL="1"
+                      labelSpanM="1"
+                      labelSpanS="12"
+                      adjustLabelSpan="false"
+                      emptySpanXL="1"
+                      emptySpanL="1"
+                      emptySpanM="1"
+                      emptySpanS="0"
+                      columnsXL="1"
+                      columnsL="1"
+                      columnsM="1"
+                      singleContainerFullSize="false">
+            <f:content>
+                <Label text="Телефон"/>
+                <Input id="cellPhone" value="{Profile/0/cellPhone}"/>
+                <Button id="saveCellPhone" text="Сохранить телефон" visible="true"
+                        press="handleSavePress"/>
+
+                <Button id="cancelCellPhone" text="Отменить" visible="true"
+                        press="cancelSavePress"/>
+            </f:content>
+        </f:SimpleForm>
+    </Dialog>
+</core:FragmentDefinition>
